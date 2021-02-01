@@ -11,8 +11,6 @@ import java.util.logging.Logger;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 
-import javax.xml.crypto.Data;
-
 public class DataProcessor {
     private static final String SQL_DROP = "DROP TABLE IF EXISTS user";
     private static final String SQL_CREATE = "CREATE TABLE IF NOT EXISTS user"
@@ -28,7 +26,6 @@ public class DataProcessor {
             + " I BOOLEAN,"
             + " J VARCHAR(320)"
             + ")";
-
     private static final String SQL_INSERT_PREPARED = "INSERT INTO user (A, B, C, D, E, F, G, H, I, J) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     public static final String CONFIG_PROPS_PATH="./config.properties";
@@ -36,7 +33,7 @@ public class DataProcessor {
     public static final String VALID_RECORD_COUNT_MSG ="Successful: ";
     public static final String INVALID_RECORD_COUNT_MSG="Failed: ";
 
-
+    // comes from config file
     private String DBUrl;
     private String inputCSVPath;
     private String logPath;
@@ -55,8 +52,8 @@ public class DataProcessor {
     public DataProcessor() {
         initializeProperties();
         initializeLogger();
-
     }
+
 
     private void initializeProperties() {
         Properties prop = new Properties();
