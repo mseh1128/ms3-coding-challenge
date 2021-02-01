@@ -145,3 +145,7 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
+
+# Extraneous log/csv files
+*-bad.csv
+.log
