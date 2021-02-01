@@ -20,33 +20,53 @@ This repo exists to process a CSV file and insert valid records into a SQLite Da
 To get a local copy up and running follow these simple steps.
 
 ## Installation
-#### Cloning the Code
+### Cloning the Code
 
 Clone this code into your local using the following command
 
 `git clone https://github.com/mseh1128/ms3-coding-challenge.git`
 
-#### Building the Application 
+### Editing configuration files
 
-The application can be built using the following command 
+Edit `config.properties` in `src\main\java\resources` to change the Database URL, I/O CSV file path, and the Log file path.
+
+By default, the input CSV file is located at `src\main\java\resources`, and the log and output CSV are stored at the root directory.
+
+`DB.Url` is hosted locally by default, so you will need to edit it to make this app work.
+
+### Building the Application 
+
+The application can be built (assemble outputs and run checks) using the following command 
 
 **Windows** : `gradlew.bat build`
 
 **Linux/MacOS**: `./gradlew build`
 
-#### Running the Application
+### Running the Application
 
-The application can be run using the following command 
+The application can be run (assembles app and executes binary) using the following command 
 
 **Windows** : `gradlew.bat run`
 
 **Linux/MacOS**: `./gradlew run`
+
+### Cleaning the Application
+
+The application can be cleaned (deletes contents of build directory) using the following command
+
+**Windows** : `gradlew.bat clean`
+
+**Linux/MacOS**: `./gradlew clean`
 
 ## Tests
 
 After the Application is built using the Build command, the test results report can be found in below file. There are currently no tests.
 *build/reports/tests/test/index.html*
 
+## Approach/Design Choices/Assumptions
+
+My approach is fairly simple. I made a DataProcessor class to encapsulate my logic, and have a public facing `processRecords()` method which utilizes a series of helper methods to process our CSV records. At present, this class isn't very reusable, however adding multiple contructors to allow for custom configurations would easily rectify this issue without adding too much complexity.
+
 ## Areas of improvement
 If I had more time, I would make the following changes:
-*
+* Add Unit Tests
