@@ -60,8 +60,10 @@ The application can be cleaned (deletes contents of build directory) using the f
 
 ## Tests
 
-After the Application is built using the Build command, the test results report can be found in below file. There are currently no tests.
+After the Application is built using the Build command, the test results report can be found in below file.
 *build/reports/tests/test/index.html*
+
+There are currently no tests.
 
 ## Approach/Design Choices/Assumptions
 
@@ -69,4 +71,12 @@ My approach is fairly simple. I made a DataProcessor class to encapsulate my log
 
 ## Areas of improvement
 If I had more time, I would make the following changes:
-* Add Unit Tests
+* Add Unit Tests (Focusing on valid configs, DB Testing, and proper Exception handling)
+* Have a Better Workflow (ie Commit more often, use feature branches, add CI/CI pipelines)
+* Add non-arbitrary primary indices to the DB schema (b/c any cols can be "null" this is impossible)
+* Add more abstraction to DataProcessor (add a class to represent DB entries, move constant Strings to a SQLConstants/ConfigConstants type files)
+* Add multiple constructors to support custom configuration (Specifically, w/ regards to Properties/Logging - Need a separate "Logging" config file)
+* Improve file structure (Ex: Add folders for logs and output CSV, in appropriate locations)
+* Add support for environment variables in config for convenience
+
+
