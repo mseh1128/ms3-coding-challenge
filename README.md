@@ -78,5 +78,6 @@ If I had more time, I would make the following changes:
 * Add multiple constructors to support custom configuration (Specifically, w/ regards to Properties/Logging - Need a separate "Logging" config file)
 * Improve file structure (Ex: Add folders for logs and output CSV, in appropriate locations)
 * Add support for environment variables in config for convenience
-
+* Do some profiling/benchmark to find performance Bottlenecks
+* Add better concurrency measures (such as connection pooling) 
 
