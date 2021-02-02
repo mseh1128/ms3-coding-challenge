@@ -44,9 +44,9 @@ public class DataProcessor {
     private int invalidRecordCount;
 
 
-    private final static Logger logger =
+    private static final Logger logger =
             Logger.getLogger(DataProcessor.class.getName());
-    private final static boolean logAppendMode = true;
+    private static final boolean logAppendMode = true;
     private FileHandler logFh;
 
     public DataProcessor() {
