@@ -14,6 +14,15 @@
 # ms3-coding-challenge
 This repo exists to process a CSV file and insert valid records into a SQLite Database. We are using Gradle as our build tool, the SQLite JDBC driver to connect to our SQLite Database, and OpenCSV to assist in processing our CSV files. Also, we are using JUnit 5 for our currently non-existent unit tests.
 
+<!-- Areas of Improvement -->
+## "Areas of Improvement" Given by Engineers that "reviewed" this challenge
+
+The notes offered by engineers that reviewed this challenge were the following:
+* Not an object oriented solution
+* No attempt at error handling
+
+Given that my solution was object-oriented and that there was extensive error handling, this feedback is pretty much useless. 
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
